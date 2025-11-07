@@ -1,0 +1,56 @@
+<!-- Neste exercício, você usará setTimeout com uma função anônima para exibir uma mensagem em uma página da Web. Você criará um código que exibe a mensagem após um atraso de dois segundos. -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Função Anônima</title>
+</head>
+
+<body>
+  <script>
+    // pegue o código do execicío 04-ExercicioCriarUmaFuncao e
+    // junte com o código do exercicío 06-exercicioCriarUmaFuncaoAnonima_parte1
+
+    // PARTE 1 - para gerar essa parte 2, ou seja nesse código teremos uma função que retorna um
+    // resultado que é atribuido a uma constante, ou seja o return é o que transfere a
+    // informação de dentro de uma função para fora, dando acesso a informação interna da função a
+    // uma variavel externa, e depois essa mensagem é exibida do html com uma função interna a document.write 
+    // com a variavel externa que recebeu as informações da função ou seja exibindo na tela.
+
+    // PARTE 2 - função interna do javascript de temporizador onde é passado como parametros o tempo de 2 segunda e uma arrow
+    //funcion que exibe na tela um olá novamente após esses dois segundos.
+
+    //função anônima
+
+    // setTimeout(
+    //   function () {          
+    //     document.write("tempo enecerrado."); 
+    //   },
+    //   2000
+    // )
+
+    // OU 
+
+    function getMessage(name) {
+      return 'Hello, ' + name + '...';
+    }
+    const message = getMessage('Ornella');
+    document.write(message);
+
+    //Arrow function
+    setTimeout(
+      () => { document.write("...hello again!") },
+      2000
+    );
+
+    // ambas (seja anônima) ou (arrow function) fazem a mesmo coisa, a unica diferença está no fato de que a arrow function é uma forma mais resumida de escrever a função anônima.
+    //Você usou uma função anônima para exibir uma mensagem após um atraso.
+  </script>
+</body>
+
+</html>
